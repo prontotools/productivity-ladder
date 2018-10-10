@@ -21,4 +21,3 @@ class TestContributor(TestCase):
 
         expected = f'username {self.contributor.username}'
         self.assertEqual(actual, expected)
-
