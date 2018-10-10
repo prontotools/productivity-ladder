@@ -1,2 +1,1 @@
-# productivity-ladder
-Productivity Ladder!
+# Productivity Ladder!
