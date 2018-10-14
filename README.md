@@ -2,13 +2,7 @@
 Basically, it will collect the number of commits on GitHub for each team member and visualize the data somehow!
 
 ```
-pipenv install
-```
-```
-pipenv shell
-```
-```
-pip install git+https://github.com/PyGithub/PyGithub.git
+pipenv install PyGithub
 ```
 
 ```
@@ -16,5 +10,5 @@ env $(cat .env)
 ```
 
 
-##Useful Resource
+## Useful Resource
 https://developer.github.com/v3/repos/commits/

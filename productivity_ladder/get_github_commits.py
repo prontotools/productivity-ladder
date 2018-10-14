@@ -10,7 +10,7 @@ g = Github(os.environ.get('ACCESS_TOKEN'))
 for repo in g.get_user('prontotools').get_repos('learntoday'):
     if repo.name == 'learntoday':
         commit = repo.get_commit(
-                sha='master',
+            sha='master',
         )
         print(commit.author)
         print(commit.commit.message)
