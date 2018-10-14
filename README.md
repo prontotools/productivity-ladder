@@ -12,7 +12,7 @@ pip install git+https://github.com/PyGithub/PyGithub.git
 ```
 
 ```
-env $(cat .env
+env $(cat .env)
 ```
 
 
