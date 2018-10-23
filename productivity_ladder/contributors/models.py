@@ -11,19 +11,17 @@ class Contributor(models.Model):
         blank=False,
         unique=True,
     )
+    repositories = models.ManyToManyField(Repository, through='Commit')
 
     def __str__(self):
         return f'username {self.username}'
 
 
 class Commit(models.Model):
+    repositories = models.ForeignKey(Repository, on_delete=models.CASCADE)
+    contributors = models.ForeignKey(Contributor, on_delete=models.CASCADE)
     count = models.IntegerField()
-    date_commited = models.DateTimeField()
-    contributor = models.ForeignKey(Contributor, on_delete=models.CASCADE)
-    repository = models.ForeignKey(Repository, on_delete=models.CASCADE)
+    date_committed = models.DateTimeField()
 
     def __str__(self):
-        return f'contributor {self.contributor} of {self.repository}'
-
-    class Meta:
-        unique_together = (('contributor', 'repository'))
+        return f'{self.contributors} commit {self.repositories}'
