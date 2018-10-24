@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.utils import timezone
 
-from contributors.models import Commit, Contributor
+from ..models import Commit, Contributor
 from repositories.models import Repository
 
 
