@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from repositories.models import Repository
+from ..models import Repository
 
 
 class TestRepository(TestCase):
